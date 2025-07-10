@@ -121,8 +121,8 @@ def record_to_sample(record: dict[str, Any]) -> Sample:
             last_boxed_only_string(record["solution"]) or record["solution"]
         ),
         metadata={
-            "level": record["level"].lower().lstrip("level "),
-            "subject": record["type"].lower(),
+            "level": str(record["level"]).lower().lstrip("level "),
+            "subject": record.get("type", record.get("subject", "unknown")).lower(),
             "solution": record["solution"],
         },
     )

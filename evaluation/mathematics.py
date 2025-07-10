@@ -37,7 +37,7 @@ from inspect_ai.solver import (
     system_message,
 )
 
-from utils import (
+from evaluation.utils import (
     filter_dataset,
     record_to_sample,
     sample_to_fewshot,
